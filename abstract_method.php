@@ -17,8 +17,12 @@ class Child extends Test
     }
 }
 
-$child = new Child();
-echo "<pre>";
-print_r($child->getData(10));
-echo "</pre>";
+try {
+    $child = new Child();
+    echo "<pre>";
+    print_r($child->getData(10));
+    echo "</pre>";
+} catch (\Throwable $th) {
+    throw $th->getMessage();
+}
 ?>
