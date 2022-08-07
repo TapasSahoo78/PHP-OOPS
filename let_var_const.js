@@ -15,4 +15,4 @@ function getName() {
 
 console.log(a);
 //console.log(c); --> Error
-console.log(getName());
+// console.log(getName());
