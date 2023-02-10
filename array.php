@@ -1,12 +1,35 @@
-<!-- Array stores multiple values -->
-
 <?php
-// $arrayName = ['Tapas','Amit'];
-$arrayName = array('Tapas', 'Amit');
-// if ($arrayName[3] == null) {
-//     //print_r($arrayName[3]);
-//     echo "not set";//Warning: Undefined array key 3 in C:\xampp\htdocs\PHP OOPS\array.php on line 5 not set
-// }
-array_push($arrayName, 'hcbs');
-echo count($arrayName);
-?>
+
+$AllData = [
+    [
+        'id' => '1',
+        'name' => 'Tapas',
+        'image' => 'img-1'
+    ],
+    [
+        'id' => '1',
+        'name' => 'Tapas',
+        'image' => 'img-1'
+    ],
+    [
+        'id' => '1',
+        'name' => 'Tapas',
+        'image' => 'img-1'
+    ]
+];
+
+$content_data = array();
+$index = 0;
+foreach ($AllData as $key => $my_data) {
+    $content_data[$index]['id'] = $my_data['id'];
+    $content_data[$index]['name'] = $my_data['name'];
+    $content_data[$index]['image'] = $my_data['image'];
+    $index++;
+}
+
+foreach ($content_data as $key => $value) {
+    echo "<pre>";
+    print_r($value['id']);
+    print_r($value['name']);
+    print_r($value['image']);
+}
